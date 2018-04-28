@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kobe</title>
+</head>
+<body>
+<!-- Site Header -->
+<h1>Hi. I am Lareina. Welcome to my blog!</h1>
+<!-- Blog Post -->
+
+<h2>My First Blog Post</h2>
+<p>Here is my first blog post.The basketball player in NBA who called Kobe Bryant is my favorite player.</p>
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523854061872&di=7bb1f15160e7d718ef8011d1945878f8&imgtype=0&src=http%3A%2F%2Fi2.hoopchina.com.cn%2Fblogfile%2F201510%2F29%2FBbsImg14460904089236_720*1015.jpg">
+<!-- Like And Comment -->
+ <button>Like</button>
+<h2>Leave a Comment</h2>
+<from action="{% url 'blog:home_page' %}" method="POST">
+
+{% csrf_token %}
+
+<form>
+	<input type="text" name="">
+</form>
+<h2>Comments</h2>
+ User {{comment.user}} says: {{comment.comment}}
+ </body>
+</html>
